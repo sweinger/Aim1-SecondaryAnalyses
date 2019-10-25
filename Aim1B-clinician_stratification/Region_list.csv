@@ -1,0 +1,66 @@
+Region,Division,"State
+ (FIPS)",Name,state abbreviation
+1,0,0,Northeast Region,
+1,1,0,New England Division,
+1,1,9,Connecticut,CT
+1,1,23,Maine,ME
+1,1,25,Massachusetts,MA
+1,1,33,New Hampshire,NH
+1,1,44,Rhode Island,RI
+1,1,50,Vermont,VT
+1,2,0,Middle Atlantic Division,
+1,2,34,New Jersey,NJ
+1,2,36,New York,NY
+1,2,42,Pennsylvania,PA
+2,0,0,Midwest Region,
+2,3,0,East North Central Division,
+2,3,17,Illinois,IL
+2,3,18,Indiana,IN
+2,3,26,Michigan,MI
+2,3,39,Ohio,OH
+2,3,55,Wisconsin,WI
+2,4,0,West North Central Division,
+2,4,19,Iowa,IA
+2,4,20,Kansas,KS
+2,4,27,Minnesota,MN
+2,4,29,Missouri,MO
+2,4,31,Nebraska,NE
+2,4,38,North Dakota,ND
+2,4,46,South Dakota,SD
+3,0,0,South Region,
+3,5,0,South Atlantic Division,
+3,5,10,Delaware,DE
+3,5,11,District of Columbia,DC
+3,5,12,Florida,FL
+3,5,13,Georgia,GA
+3,5,24,Maryland,MD
+3,5,37,North Carolina,NC
+3,5,45,South Carolina,SC
+3,5,51,Virginia,VA
+3,5,54,West Virginia,WV
+3,6,0,East South Central Division,
+3,6,1,Alabama,AL
+3,6,21,Kentucky,KY
+3,6,28,Mississippi,MS
+3,6,47,Tennessee,TN
+3,7,0,West South Central Division,
+3,7,5,Arkansas,AR
+3,7,22,Louisiana,LA
+3,7,40,Oklahoma,OK
+3,7,48,Texas,TX
+4,0,0,West Region,
+4,8,0,Mountain Division,
+4,8,4,Arizona,AZ
+4,8,8,Colorado,CO
+4,8,16,Idaho,ID
+4,8,30,Montana,MT
+4,8,32,Nevada,NV
+4,8,35,New Mexico,NM
+4,8,49,Utah,UT
+4,8,56,Wyoming,WY
+4,9,0,Pacific Division,
+4,9,2,Alaska,AK
+4,9,6,California,CA
+4,9,15,Hawaii,HI
+4,9,41,Oregon,OR
+4,9,53,Washington,WA

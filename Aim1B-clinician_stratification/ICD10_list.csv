@@ -1,0 +1,214 @@
+t_ICD10,description,grouper
+A00*,Cholera,A
+A01*,Typhoid,A
+A02*,Other GI Salmonella,A
+A03*,Shigella,A
+A04*,Other bacterial intestinal infections,A
+A05*,Other bacteraial foodborne infections,A
+A06*,Amebic infections,A
+A07*,Other protozoal intestinal infections,A
+A09*,"Infectious gastroenteritis and colitis, unspecified",A
+A15*,TB,A
+A17*,TB,A
+A18*,TB,A
+A19*,TB,A
+A2*,Certain zoonotic bacterial diseases,A
+A3*,Bacterial diseases,A
+A4*,Bacterial diseases,A
+A46*,Erysipelas,A
+A5*,Bacteria STDs and syphilis,A
+A64*,Unspecified sexually transmitted disease,A
+A65*,Nonvenereal syphilis,A
+A66*,Yaws,A
+A67*,Pinta,A
+A68*,Relapsing Fevers,A
+A69*,Lyme and other spirochete infections,A
+A7*,Chlamydial and ricketsiall disease,A
+B5*,Protozoal Diseases,A
+B6*,Other protozoal and spirochetes and worms,A
+B7*,Worms,A
+B95*,"Strep, staph, enterococcus causing disease elsewhere classified",A
+B96*,Other bacterial agents causing disease elswhere classified,A
+G0*,"Meningitis, encephalitis, intracranial and spinal abscess",A
+H00*,Hordeolums and chalazion including eylid abscess,A
+H05*,Disorders of orbit,A
+H10*,Conjunctivitis,A
+H15*,Scleritis,A
+H16*,Keratitis,A
+H20*,Iridocyclitis,A
+H440*,Endophtalmitits,A
+H441*,Other endophtalmitis,A
+H60*,Otitis Externa,A
+H610*,Chondritis and perichondritis of ear,A
+H65*,Nonsuppurative otitis media,A
+H66*,Supurative and unsepcificed otitis media,A
+H67*,OM in diseases classified elsewhere,A
+H70*,Mastoiditis,A
+H73*,Myringitis and other tympanic membrane disorder,A
+H75*,Mastoiditis,A
+I00*,Rheumatic Fever,A
+I01*,Rheumatic Fever,A
+I311*,Infectious Pericarditis,A
+I33*,Endocarditis,A
+I38*,Endocarditis,A
+J00*,Acute Nasopharyngitis (Common Cold),O
+J01*,Sinusitis,A
+J02*,Pharyngitis,A
+J03*,Tonsillitis,A
+J040*,Laryngitis,O
+J041*,Tracheis,A
+J042*,laryngotracheitis,O
+J043*,Supraglottitis,O
+J050*,Croup,O
+J051*,Epiglottitis,A
+J06*,Acute URI of multiple or unspecified sites,O
+J09*,Influenza,O
+J10*,Influenza due to other influenza virus,O
+J11*,Influenza due to unidentified influenza virus,O
+J12*,Viral pna,O
+J13*,Strep pna pna,A
+J14*,H Flu pna,A
+J15*,Bacterial PNA NOS,A
+J16*,"Bacertial due to toehr infections pna,",A
+J18*,Pna of unspecified location,A
+J200*,bronchitis mycoplasma,A
+J201*,bronchitis h flu,A
+J202*,bronchitis strep,A
+J203*,brochitis coxsackivirus,O
+J204*,bronchitis parainfluenza,O
+J205*,bronchitis RSV,O
+J206*,bronchitis rhinovirus,O
+J207*,bronchitis echovirus,O
+J208*,bronchitis other specified organisms,O
+J209*,unspecified bronchitis,O
+J21*,Bronchiolitis,O
+J22*,Lower RTI unspecified,O
+J30*,Vasomotor and allergic rhinitis,O
+J31*,"Chronic rhinitis, nasopharyngitis, and pharyngitis",O
+J32*,chronic sinusitis,A
+J340*,Nasal abscess,A
+J36*,Peritonsillar abscess,A
+J390*,retropharyngeal abscess,A
+J391*,other absccess of pharyx,A
+J40*,Bronchitis NOS,O
+J41*,Chronic bronchitis specificed such as mucopuruulent,A
+J42*,Chronic bronchitis NOS,A
+J43*,Emphysema,A
+J44*,COPD,A
+J45*,Asthma,O
+J47*,Bronchiectasis,A
+J80*,ARDS,A
+J84*,Intersitial lung disease,A
+J85*,Lung abscess,A
+J86*,Pyothorax,A
+K02*,Dental caries,A
+K04*,Diseases of pulp and periapical tissue,A
+K05*,Gingivitis and periodontal diseases,A
+K112*,Sialoadenitis,A
+K113*,Salivary abscess,A
+K12*,Stomatitis,A
+K35*,Acute appendicitis,A
+K36*,Other appendicitis,A
+K37*,Unspecified appendicitis,A
+K38*,Other diseases of appendix,A
+K50*,Crohn's,A
+K51*,Ulcerative colitis,A
+K55*,Vascular disorders of intestine,A
+K57*,Diverticular disease of intestine,A
+K61*,Abscess of anal and rectal regions,A
+K63*,Other diseases of intestine,A
+K65*,Peritonitis,A
+K66*,Peritoneum,A
+K67*,Infectious disorders of peritoneum,A
+K68*,Disorders of retroperitoneum,A
+K750*,Abscess of liver,A
+K80*,"Cholelithiasis, some with complications",A
+K81*,Cholecystitis,A
+K83*,Other diseases of biliary tract,A
+K85*,Acute pancreatitis,A
+K92*,Other diseases of digestive system,A
+K94*,Complications of artificial openings of the digestive system,A
+K95*,Complications of bariatric procedures,A
+L00*,L00 Staphylococcal scalded skin syndrome,A
+L01*,L01 Impetigo,A
+L02*,"L02 Cutaneous abscess, furuncle and carbuncle",A
+L03*,L03 Cellulitis and acute lymphangitis,A
+L04*,L04 Acute lymphadenitis,A
+L05*,L05 Pilonidal cyst and sinus,A
+L08*,L08 Other local infections of skin and subcutaneous tissue,A
+L10*,L10 Pemphigus,A
+L11*,L11 Other acantholytic disorders,A
+L12*,L12 Pemphigoid,A
+L13*,L13 Other bullous disorders,A
+L14*,L14 Bullous disorders in diseases classified elsewhere,A
+L40*,L40 Psoriasis,A
+L51*,L51 Erythema multiforme,A
+L52*,L52 Erythema nodosum,A
+L600*,L600 Ingrowing nail,A
+L70*,L70 Acne,A
+L73*,L73 Other follicular disorders including hidradentitis suppurativa,A
+L88*,L88 Pyoderma gangrenosum,A
+L89*,L89 Pressure ulcer,A
+L97*,"L97 Non-pressure chronic ulcer of lower limb, not elsewhere classified",A
+M00*,Bacterial arthritis,A
+M01*,Other infecitous arthritis,A
+M46*,vertebral/disc infections,A
+M60*,Myositis,A
+M70*,"Soft tissue disorders related to overuse and pressure, including bursitis",A
+M86*,Osteomyelitis,A
+N10*,Acute Pyeloneprhitis,A
+N12*,Tubulointerstitial Nephritis NOS,A
+N30*,Cystitits,A
+N34*,Urethritis,A
+N390*,UTI NOS,A
+N41*,Prostatitis,A
+N45*,Epididimo orchitis,A
+N476*,Balanoposthitis,A
+N481*,Balanitis,A
+N49*,Inflammatory disorders of male genitals NOS including Fourniers' Gangrene,A
+N61*,Mastitis and Breast Abscess,A
+N7*,female GU infections,A
+O23*,Infections of the genitourinary system in pregnancy,A
+O411*,Infection of amniotic sac and membranes,A
+085*,Puerperal sepsis,A
+O86*,Other puerperal infections,A
+O91*,"Infections of breast associated with pregnancy, the puerperium and lactation",A
+O98*,"Maternal infectious and parasitic diseases classifiable elsewhere but complicating pregnancy, childbirth and the puerperium",A
+P36*,Bacterial sepsis of newborn,A
+P37*,Other congenital infectious diseases,A
+P38*,Omphalitis,A
+P39*,Other infections specific to the perinatal period,A
+P77*,Nectrotizing Enterocolitis,A
+R36*,Urethral discharge,A
+R7881*,Bacteremia,A
+R8271*,Bacteruria,A
+S31*,"Open wound of abdomen, lower back, pelvis and external genitals",A
+S41*,Open wound of shoulder and upper arm,A
+S51*,Open wound of elbow and forearm,A
+S61*,"Open wound of wrist, hand and fingers",A
+S71*,Open wound of hip or thigh,A
+T802*,"Infections following infusion, transfusion and therapeutic injection",A
+T826*,Prosthetic cardiac valve infection,A
+T827*,Other cardiac device infectino,A
+T845*,Infections of internal joint prosthesis,A
+T846*,Infection of external fixation,A
+T847*,Infection of other internal orthopedic device,A
+T84*,"Complications of internal orthopedic prosthetic devices, implants and grafts",A
+T85*,"Complications of other internal prosthetic devices, implants and grafts",A
+T87*,Complications peculiar to reattachment and amputation,A
+T88*,"Other complications of surgical and medical care, not elsewhere classified",A
+W53*,contact with rodent,A
+W54*,Contact with dog,A
+W55*,Contact with other mammals,A
+W56*,Contact with marine animal,A
+W57*,Bitten or stung by nonvenomous insect and other nonvenomous arthropods,A
+W59*,Reptile,A
+W60*,Contact with nonvenomous plant thorns and spines and sharp leaves,A
+W61*,birds,A
+W62*,amphibians,A
+Y28*,"Contact with sharp object, undetermined intent",A
+Y83*,"Surgical operation and other surgical procedures as the cause of abnormal reaction of the patient, or of later complication, without mention of misadventure at the time of the procedure",A
+Z11*,Encounter for screening for infectious and parasitic diseases,A
+Z20*,Contact with and (suspected) exposure to communicable diseases,A
+Z21*,Asymptomatic human immunodeficiency virus [HIV] infection status,A
+Z22*,Carrier of infectious disease,A
