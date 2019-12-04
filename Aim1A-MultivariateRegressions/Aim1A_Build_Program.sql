@@ -1,4 +1,5 @@
 /*Merge extract and abx inappropriate, consult region by dx code*/
+/*need to add is_abx from Cerner/multum and ARI_encounter*/
 
 create table extract as
   select a.*, b.flag, c.region as Consult_Region, d.region as Patient_Region
