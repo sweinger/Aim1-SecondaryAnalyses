@@ -36,9 +36,10 @@ mutate(ConsultDetails,
 
 ## Summary Tables
 # Frequency of Cancellation Codes - figure out counts
+CancelCodes <- group_by(Cancelled_Consult_Reason_Code, Cancelled_Consult_Reasons_Description)
+summarise(CancelCodes, count())
 
-CancelCodes <- group_by(Cancelled_Consult_Reason_Code, Cancelled_Consult_Reasons_Description
-
+##########
 ICD_ValueSet <- read.csv(icd10_path)
 NDC_ValueSet <- read.csv(ndc_path)
 Region_ValueSet <- read.csv(regions_path)
