@@ -10,7 +10,7 @@ regions_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value
 ## Pkgs and logs:
 install.packages("tidyverse")
 install.packages("lubridate")
-sink("./Aim1A_Summary_Tables_Log.txt")
+sink("./Aim1A_Summary_Tables_Log.txt", append=TRUE)
 ##############
 
 ## Load Data Frames and Clean:
@@ -35,13 +35,18 @@ mutate(ConsultDetails,
 )
 
 ## Summary Tables
-# Frequency of Cancellation Codes - figure out counts
+# Frequency of Cancellation Codes - figure out counts (use pipe)
 CancelCodes <- group_by(Cancelled_Consult_Reason_Code, Cancelled_Consult_Reasons_Description)
 summarise(CancelCodes, count())
 
+# Create Table of Dx Codes and Descriptions to compare below
+# Freq of Consult Type, Consult Alternative Code/Desc, Method of Consult Request
+# Summary Stats Overall
+# Summary Stats By Season
+
 ##########
 ICD_ValueSet <- read.csv(icd10_path)
-# Compare list of ARI-ICDs between Linder List and TD List
+# Compare list of ARI-ICDs between Linder List and TD List,
 
 NDC_ValueSet <- read.csv(ndc_path)
 # Compare list of abx NDCs between this list and TD list, and names of drugs that are on the extract
