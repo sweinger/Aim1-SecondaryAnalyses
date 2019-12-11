@@ -41,7 +41,12 @@ summarise(CancelCodes, count())
 
 ##########
 ICD_ValueSet <- read.csv(icd10_path)
+# Compare list of ARI-ICDs between Linder List and TD List
+
 NDC_ValueSet <- read.csv(ndc_path)
+# Compare list of abx NDCs between this list and TD list, and names of drugs that are on the extract
+# broad spectrum vs all abx 
+
 Region_ValueSet <- read.csv(regions_path)
 
 # only select region codes by-state
