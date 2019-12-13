@@ -16,17 +16,14 @@ sink("./Aim1A_Summary_Tables_Log.txt", append=TRUE)
 ## Load Data Frames and Clean:
 ConsultDetails <- read.csv(fakedata_path)
 
-# Convert datetime vars
-mutate(ConsultDetails, 
+# Convert datetime vars and time-related derived vars
+ConsultDetails1 <- mutate(ConsultDetails, 
 	DOB_dt=mdy(DOB), 
 	Consult_Request_dt=mdy_hm(Consult_Request_Date), 
 	Consult_Start_dt=mdy_hm(Consult_Start_Date_Time), 
 	Consult_End_dt=mdy_hm(Consult_End_Date_Time), 
 	MHD_Completion_dt=mdy_hm(MHD_Completion_Date_Time), 
-	Called_Back_tm=hms(Called_Back_Time)
-) 
-# Create time-related derived vars
-mutate(ConsultDetails, 
+	Called_Back_tm=hms(Called_Back_Time),
 	Age_At_Consult=years(as_date(Consult_Start_dt)-DOB_dt), 
 	WaitTime_Mins=(Consult_Start_dt-Consult_Request_dt)/60, 
 	ConsultDuration_Mins=(Consult_End_dt-Consult_Start_dt)/60, 
@@ -35,18 +32,30 @@ mutate(ConsultDetails,
 )
 
 ## Summary Tables
-# Frequency of Cancellation Codes - figure out counts (use pipe)
-CancelCodes <- group_by(Cancelled_Consult_Reason_Code, Cancelled_Consult_Reasons_Description)
-summarise(CancelCodes, count())
+# Frequency of Cancellation Codes
+ConsultDetails1 %>%
+	group_by(Cancelled_Consult_Reason_Code, Cancelled_Consult_Reasons_Description) %>%
+	count(Cancelled_Consult_Reason_Code)
 
-# Create Table of Dx Codes and Descriptions to compare below
-# Freq of Consult Type, Consult Alternative Code/Desc, Method of Consult Request
-# Summary Stats Overall
-# Summary Stats By Season
+# Frequency of Consult Alternative Code/Desc
+ConsultDetails1 %>%
+	group_by(Consult_Alternative_Code, Consult_Alternative_Description) %>%
+	count(Consult_Alternative_Code)
+
+# Freq of Consult Type by Method of Consult Request
+consult_type_request <- table(ConsultDetails1$Consult_Type, ConsultDetails1$Method_of_Consult_Request) 
+margin.table(consult_type_request,1)
+margin.table(consult_type_request,2)
+prop.table(consult_type_request,1)
+prop.table(consult_type_request,2)
+
+# Summarize Wait Time and Duration
+# Summary Wait Time and Duration By Season
 
 ##########
 ICD_ValueSet <- read.csv(icd10_path)
 # Compare list of ARI-ICDs between Linder List and TD List,
+# Create Table of Dx Codes and Descriptions to compare below
 
 NDC_ValueSet <- read.csv(ndc_path)
 # Compare list of abx NDCs between this list and TD list, and names of drugs that are on the extract
