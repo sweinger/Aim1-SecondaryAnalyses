@@ -79,3 +79,11 @@ Region_ValueSet <- read.csv(regions_path)
 
 # only select region codes by-state
 Region_ValueSet=subset(Region_ValueSet,state.abbreviation!="",select=c(Region,state.abbreviation))
+
+####
+# Save rdata files
+saveRDS(ConsultDetails1, file = "Consult_Details.rds")
+#whichever the final value set ends up being
+saveRDS(ICD_ValueSet, file = "ICD_ValueSet.rds")
+saveRDS(NDC_ValueSet, file = "NDC_ValueSet.rds")
+saveRDS(Region_ValueSet, file = "Region_ValueSet.rds")
