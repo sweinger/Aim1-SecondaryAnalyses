@@ -3,9 +3,6 @@ setwd("/schaeffer-a/sch-projects/dua-data-projects/Teladoc/kmkaiser/")
 
 ## File paths:
 fakedata_path="/schaeffer-a/sch-data-library/dua-data/TelaDoc/Original_data/Data/Sample_File-Consult Details_Fake Data_2019-11-20.csv"
-icd10_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value_Sets/ICD_VALUE_SET_LINDER.csv"
-ndc_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value_Sets/NDC_list.csv"
-regions_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value_Sets/Region_list.csv"
 
 ## Pkgs and logs:
 library.dynam(tidyverse)
@@ -70,5 +67,5 @@ qplot(ConsultDetails1$WaitTime_Mins,
 
 
 ####
-# Save rdata files
+## Save clean rdata files
 saveRDS(ConsultDetails1, file = "Consult_Details.rds")
