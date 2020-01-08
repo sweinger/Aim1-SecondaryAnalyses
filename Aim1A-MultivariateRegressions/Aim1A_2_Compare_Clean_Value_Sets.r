@@ -1,4 +1,17 @@
-##########
+# Working Directory:
+setwd("/schaeffer-a/sch-projects/dua-data-projects/Teladoc/kmkaiser/")
+
+## File paths:
+icd10_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value_Sets/ICD_VALUE_SET_LINDER.csv"
+ndc_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value_Sets/NDC_list.csv"
+regions_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value_Sets/Region_list.csv"
+
+## Pkgs and logs:
+library.dynam(tidyverse)
+library.dynam(lubridate)
+#sink("./Aim1A_Summary_Tables_Log.txt")
+
+##############
 ICD_ValueSet <- read.csv(icd10_path)
 # Compare list of ARI-ICDs between Linder List and TD List,
 # Create Table of Dx Codes and Descriptions to compare below
