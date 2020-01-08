@@ -16,6 +16,8 @@ library.dynam(lubridate)
 ## Load Data Frames and Clean:
 ConsultDetails <- read.csv(fakedata_path)
 
+# [Modify to concatenate multiple months of data with bind_rows()]
+
 # Convert datetime vars and time-related derived vars
 ConsultDetails1 <- mutate(ConsultDetails, 
     DOB_dt=mdy(DOB), 
@@ -66,24 +68,7 @@ qplot(ConsultDetails1$WaitTime_Mins,
 )
 # Summary Wait Time and Duration By Season
 
-##########
-ICD_ValueSet <- read.csv(icd10_path)
-# Compare list of ARI-ICDs between Linder List and TD List,
-# Create Table of Dx Codes and Descriptions to compare below
-
-NDC_ValueSet <- read.csv(ndc_path)
-# Compare list of abx NDCs between this list and TD list, and names of drugs that are on the extract
-# broad spectrum vs all abx 
-
-Region_ValueSet <- read.csv(regions_path)
-
-# only select region codes by-state
-Region_ValueSet=subset(Region_ValueSet,state.abbreviation!="",select=c(Region,state.abbreviation))
 
 ####
 # Save rdata files
 saveRDS(ConsultDetails1, file = "Consult_Details.rds")
-#whichever the final value set ends up being
-saveRDS(ICD_ValueSet, file = "ICD_ValueSet.rds")
-saveRDS(NDC_ValueSet, file = "NDC_ValueSet.rds")
-saveRDS(Region_ValueSet, file = "Region_ValueSet.rds")
