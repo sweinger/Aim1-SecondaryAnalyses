@@ -6,6 +6,9 @@ icd10_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value_S
 ndc_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value_Sets/NDC_list.csv"
 regions_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/zhongjic/Value_Sets/Region_list.csv"
 
+TD_ndc_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/kmkaiser/Value_Sets/Antibiotic_All.csv"
+TD_icd10_path="/schaeffer-a/sch-projects/dua-data-projects/Teladoc/kmkaiser/Value_Sets/Diagnosis_TDH Reporting_2019-12-18.csv"
+
 ## Pkgs and logs:
 library.dynam(tidyverse)
 library.dynam(lubridate)
@@ -13,7 +16,8 @@ library.dynam(lubridate)
 
 ##############
 ICD_ValueSet <- read.csv(icd10_path)
-# Compare list of ARI-ICDs between Linder List and TD List,
+TD_ICD_ValueSet <- read.csv(TD_icd10_path)
+# Compare list of ARI-ICDs between Linder List and TD List
 # Create Table of Dx Codes and Descriptions to compare below
 
 NDC_ValueSet <- read.csv(ndc_path)
