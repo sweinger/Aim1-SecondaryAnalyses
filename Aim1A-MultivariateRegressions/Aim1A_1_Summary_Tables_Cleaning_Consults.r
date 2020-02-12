@@ -29,7 +29,19 @@ ConsultDetails1 <- mutate(ConsultDetails,
     Consult_Month=month(Consult_Start_dt),
     Consult_Quarter=quarter(Consult_Start_dt)
 )
-
+## new
+# Create shifts and ordinal position of consult within shift
+ConsultDetails1 %>%
+    arrange(NPI,Consult_Start_dt,Consult_End_dt) %>% #sort by provider and consult time
+    mutate(prev_Consult_End_dt=lag(Consult_End_dt),
+           gap=Consult_Start_dt-prev_Consult_End_dt,
+           gap=na_if(NPI!=lag(NPI)) #find gap value and set to missing if it's the first value for an NPI
+           ) %>%
+    group_by(NPI) %>%
+    mutate(
+         
+           
+###################
 ## Summary Tables
 # Frequency of Cancellation Codes
 ConsultDetails1 %>%
