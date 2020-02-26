@@ -30,16 +30,22 @@ ConsultDetails1 <- mutate(ConsultDetails,
     Consult_Quarter=quarter(Consult_Start_dt)
 )
 ## new
-# Create shifts and ordinal position of consult within shift
-ConsultDetails1 %>%
-    arrange(NPI,Consult_Start_dt,Consult_End_dt) %>% #sort by provider and consult time
-    mutate(prev_Consult_End_dt=lag(Consult_End_dt),
-           gap=Consult_Start_dt-prev_Consult_End_dt,
-           gap=na_if(NPI!=lag(NPI)) #find gap value and set to missing if it's the first value for an NPI
-           ) %>%
-    group_by(NPI) %>%
-    mutate(
-         
+# Create shifts and ordinal position of consult within shift - code from Sam
+# May adapt in future to keep the gap variable and use the gap time as "mental recovery time" in analysis
+ConsultDetails2 <- ConsultDetails1 %>%
+  arrange(NPI,Consult_Start_dt,Consult_End_dt) %>% #sort by provider and consult time
+  group_by(NPI) %>%
+  mutate(prev_Consult_End_dt = dplyr::lag(Consult_End_dt, n = 1, default = NA),
+         gap_hours = coalesce(as.numeric(difftime(Consult_Start_dt, prev_Consult_End_dt, units = "hours")), 0)) %>%
+  group_by(NPI, idx = cumsum(gap_hours > 4)) %>%
+  mutate(ordinal_position_shift = row_number()) %>%
+  ungroup() %>% 
+  select(-c(prev_Consult_End_dt,gap_hours,idx)) %>%
+  group_by(NPI, ordinal_position_shift) %>%  #add running count of consults within the shift
+  mutate(consultcounter_inshift = row_number()) >%
+  ungroup() %>% 
+
+# we can use this logic to create running counts of minutes in a given shift, etc. as needed
            
 ###################
 ## Summary Tables
