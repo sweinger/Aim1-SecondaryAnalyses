@@ -24,19 +24,19 @@ ConsultDetails_icd %>%
 #sample mostly ARIs with prescription
 ARI_Prescription <- 
 ConsultDetails_icd %>%
-  filter(!is.na(diagnosis_cd) & !is.na(Prescription_1)) %>%
+  filter(Cancelled_Consult=="N" & !is.na(diagnosis_cd) & !is.na(Prescription_1)) %>%
   sample_n(500)
 
 #sample mostly ARIs with no prescription
 ARI_NoDrug <- 
 ConsultDetails_icd %>%
-  filter(!is.na(diagnosis_cd) & is.na(Prescription_1)) %>%
+  filter(Cancelled_Consult=="N" & !is.na(diagnosis_cd) & is.na(Prescription_1)) %>%
   sample_n(250)
 
 #sample none of the above
 OtherConsults <- 
 ConsultDetails_icd %>%
-  filter(is.na(diagnosis_cd) & is.na(Prescription_1)) %>%
+  filter(Cancelled_Consult=="N" & is.na(diagnosis_cd)) %>%
   sample_n(200)
 
 SampleConsults <- bind_rows(Cancellations, ARI_Prescription, ARI_NoDrug, OtherConsults)
