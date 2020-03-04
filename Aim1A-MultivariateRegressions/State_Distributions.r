@@ -30,6 +30,16 @@ prov_bystate <- olddata_roll %>%
 
 qplot(x=provcount, data=prov_bystate, geom="histogram")
 
+
+#Phys within state
+provstats_bystate <- olddata_roll %>%
+  group_by(consult_state_cd, NPI) %>%
+  summarise(visitcount=n(), visitcount_abx=sum(abx_count)) %>%
+  mutate(prescribing_rate=visitcount_abx/visitcount) %>%
+  group_by(consult_state_cd) %>%
+  summarise(provcount=n_distinct(NPI), mean_prescribe=mean(prescribing_rate), min_prescribe=min(prescribing_rate), med_prescribe=median(prescribing_rate), max_prescribe=max(prescribing_rate), sd_prescribe=sd(prescribing_rate))
+
+
 #Intracluster correlation - subject to change, taking too long
 iccbin(consult_state_cd, abx_count, data=olddata_roll, method = c("aov"))
 print.iccbin
