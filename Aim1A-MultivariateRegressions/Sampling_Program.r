@@ -19,25 +19,25 @@ ConsultDetails_icd <- left_join(ConsultDetails,ICD_Merged,by=c("Diagnosis_1"="di
 Cancellations <- 
 ConsultDetails_icd %>%
   filter(Cancelled_Consult=="Y") %>%
-  sample_n(50)
+  sample_n(500)
 
 #sample mostly ARIs with prescription
 ARI_Prescription <- 
 ConsultDetails_icd %>%
   filter(Cancelled_Consult=="N" & !is.na(diagnosis_cd) & !is.na(Prescription_1)) %>%
-  sample_n(500)
+  sample_n(5000)
 
 #sample mostly ARIs with no prescription
 ARI_NoDrug <- 
 ConsultDetails_icd %>%
   filter(Cancelled_Consult=="N" & !is.na(diagnosis_cd) & is.na(Prescription_1)) %>%
-  sample_n(250)
+  sample_n(2500)
 
 #sample none of the above
 OtherConsults <- 
 ConsultDetails_icd %>%
   filter(Cancelled_Consult=="N" & is.na(diagnosis_cd)) %>%
-  sample_n(200)
+  sample_n(2000)
 
 SampleConsults <- bind_rows(Cancellations, ARI_Prescription, ARI_NoDrug, OtherConsults)
 
