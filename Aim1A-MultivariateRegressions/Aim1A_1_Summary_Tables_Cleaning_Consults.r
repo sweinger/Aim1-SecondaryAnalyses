@@ -10,10 +10,11 @@ library.dynam(lubridate)
 #sink("./Aim1A_Summary_Tables_Log.txt")
 ##############
 
-## Load Data Frames and Clean:
-ConsultDetails <- read.csv(fakedata_path)
-
-# [Modify to concatenate multiple months of data with bind_rows()]
+# read in csvs - update the path parameter to reflect location of consult csvs - maybe a subfolder
+ConsultDetails_all <- 
+  list.files(path=, pattern = "*.csv") %>% 
+  map_dfr(~read_csv(.)) %>%
+  filter(Product=="GENMEDICAL")
 
 # Convert datetime vars and time-related derived vars
 ConsultDetails1 <- mutate(ConsultDetails, 
@@ -29,7 +30,10 @@ ConsultDetails1 <- mutate(ConsultDetails,
     Consult_Month=month(Consult_Start_dt),
     Consult_Quarter=quarter(Consult_Start_dt)
 )
-## new
+
+# Top and bottom censoring of wait times - negative to 0, over 24h to 24h
+mutate(ConsultDetails1, WaitTime_Mins_C=
+
 # Create shifts and ordinal position of consult within shift - code from Sam
 # May adapt in future to keep the gap variable and use the gap time as "mental recovery time" in analysis
 ConsultDetails2 <- ConsultDetails1 %>%
@@ -47,6 +51,11 @@ ConsultDetails2 <- ConsultDetails1 %>%
 
 # we can use this logic to create running counts of minutes in a given shift, etc. as needed
            
+       
+       
+       
+       
+       
 ###################
 ## Summary Tables
 # Frequency of Cancellation Codes
